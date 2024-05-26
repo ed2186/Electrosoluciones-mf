@@ -1,0 +1,99 @@
+*{
+  box-sizing: border-box;
+}
+
+
+.label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+
+.custom-form input{
+   background-color: #F7F7F7;
+  border-radius: 8px;
+  height: 30px;
+  font-size: 16px;
+  padding: 6px;
+  margin-bottom: 12px;
+}
+
+button{
+  margin-top: 14px;
+  margin-bottom: 30px;
+}
+.enlace{
+
+  color: #FF8C5C;
+  text-align: center;
+  font-size: 14px;
+  text-decoration: none;
+  margin-bottom: 54px;
+
+}
+
+.signup-button{
+  margin-top: 14px;
+   margin-bottom: 30px;
+ }
+
+
+
+
+.login {
+  max-width: 400px;
+  border-radius: 13px;
+  border-color: #FF8C5C;
+  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  margin: 10rem auto 0 auto ;
+}
+
+.custom-form{
+  min-width: 300px;
+  max-width: 60px;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+img{
+   width: 220px;
+   margin-left: 25px;
+   margin-bottom: 48px;
+  }
+
+
+.custom-form button{
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  border:none;
+  font-size: 0.87rem;
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #FF8C5C;
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  height: 40px;
+  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #FFFFFF;
+  cursor: pointer;
+}
+
+
+.imgLogo{
+  margin-top: 40px !important;
+}
+
+.p-field{
+  display: contents !important;
+  input{
+    border-color: #FF8C5C;
+  }
+  label {
+    margin-bottom: 13px;
+  }
+}
+

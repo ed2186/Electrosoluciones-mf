@@ -1,0 +1,57 @@
+<div style="display: flex; justify-content: center;">
+  <p-card header={{config.data.title}}>
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+      <div class="p-fluid">
+
+        <div class="p-field">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" pInputText formControlName="nombre" >
+
+        </div>
+
+        <div class="p-field">
+          <label for="descripcion">Descripción</label>
+          <textarea id="descripcion" pInputTextarea formControlName="descripcion"></textarea>
+        </div>
+
+        <div class="p-field">
+          <label for="unidad">Unidad</label>
+          <input id="unidad" pInputText formControlName="unidad" >
+
+        </div>
+
+        <div class="p-field">
+          <label for="image">Imagen</label>
+          <input id="image" pInputText formControlName="imagen">
+          <p-fileUpload name="demo[]" url="https://www.primefaces.org/cdn/api/upload.php" (onUpload)="onUpload($event)"
+            [multiple]="false" accept="image/*" [maxFileSize]="1000000">
+            <ng-template pTemplate="content">
+              <ul *ngIf="uploadedFiles.length">
+                <li *ngFor="let file of uploadedFiles">
+                  {{ file.name }} - {{ file.size }} bytes
+                </li>
+              </ul>
+            </ng-template>
+          </p-fileUpload>
+        </div>
+
+        <div class="p-field">
+          <label for="price">Precio</label>
+          <p-inputNumber id="price" formControlName="precio" [min]="0" mode="currency" currency="USD"
+            locale="en-US"></p-inputNumber>
+        </div>
+        
+        <div class="p-field">
+          <label for="cantidad">Cantidad</label>
+          <p-inputNumber id="cantidad" formControlName="cantidad" [min]="0"></p-inputNumber>
+        </div>
+
+        <div class="p-field" style="margin-top: 10px;">
+          <button pButton type="submit" label="Guardar" class="p-button-success"></button>
+        </div>
+      </div>
+    </form>
+  </p-card>
+
+
+</div>

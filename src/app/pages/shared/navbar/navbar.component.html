@@ -1,0 +1,14 @@
+
+
+<header class="navegación">
+
+  <div class="logo">
+    <a href="Admin"><img [src]="logoRuta"></a>
+  </div>
+  <div class="correo-foto">
+
+      <a href={{rutaCorreo}}>{{correo}}</a>
+      <i class="fa-solid fa-user img"></i>
+      <a *ngIf="logeado" class="salida-applicacion" href="/"><i class="fa fa-sign-out" aria-hidden="true"></i> </a>
+  </div>
+</header>

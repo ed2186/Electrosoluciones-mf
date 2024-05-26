@@ -1,0 +1,24 @@
+
+<p-card class="login">
+  <img pCardImage [src]="logo" alt="Photo of a Shiba Inu" class="imgLogo">
+
+  <div class="p-card-content" style="display: flex;flex-direction: column; align-items: center;">
+    <form class="custom-form">
+
+      <div class="p-field">
+        <label for="usuario">Usuario</label>
+        <input id="usuario" pInputText [formControl]="email" type="email" placeholder="Usuario" required>
+      </div>
+
+      <div class="p-field">
+        <label for="contrasena">Contraseña</label>
+        <input id="contrasena" pInputText [formControl]="password" type="password" placeholder="Contraseña" required>
+      </div>
+
+      <button pButton type="button" (click)="Entrar()" class="p-button-secondary signup-button">Entrar</button>
+      <a href="#" class="enlace">Olvidé mi contraseña</a>
+    </form>
+
+  </div>
+</p-card>
+

@@ -1,0 +1,42 @@
+<app-navbar (mostrarSidebar)="mostrarSidebar($event)"></app-navbar>
+<div class="contenedor">
+  <div class="header">
+    <h2>Productos</h2>
+    <p-button label="Crear producto" [raised]="true" [outlined]="true" class="p-button-success" (onClick)="crearProducto()"></p-button>
+  </div>
+
+  <div class="contenido">
+    <div class="card-content">
+      <p-card *ngFor="let product of products"  class="p-card">
+
+        <ng-template pTemplate="title">
+          {{ product.nombre }}
+        </ng-template>
+        <ng-template pTemplate="content">
+          <div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 10px;">
+
+            <img [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + product.imagen" [alt]="product.nombre"
+              width="100" class="shadow-4" />
+            <span>{{product.descripcion}}</span>
+            <span> Precio: {{ product.precio |  currency }} </span>
+            <span *ngIf="getSeverity(product.estatus)==='success'" style="background-color: rgb(130, 222, 136); color: black;">{{product.estatus}}</span>
+            <span *ngIf="getSeverity(product.estatus)==='warning'" style="background-color: rgb(246, 117, 69); color: black;">{{product.estatus}}</span>
+            <span *ngIf="getSeverity(product.estatus)==='danger'" style="background-color: rgb(255, 96, 96); color: black;">{{product.estatus}}</span>
+
+          </div>
+
+          <div class="content-btn">
+            <p-button label="Editar" [raised]="true" [outlined]="true" (onClick)="editarProducto(product)"></p-button>
+            <p-button label="Eliminar" [outlined]="true" (onClick)="eliminarProducto(product)" ></p-button>
+
+          </div>
+
+        </ng-template>
+      </p-card>
+
+    </div>
+
+
+</div>
+
+</div>

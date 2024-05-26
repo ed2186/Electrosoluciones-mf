@@ -1,0 +1,40 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.contenedor{
+  display: flex;
+
+}
+
+.contenido{
+  width: 100%;
+  padding: 3rem 3rem 0 0;
+  text-align: center;
+}
+
+.bienvenida{
+  display: inline-block;
+}
+.bienvenida  img{
+  height: 15rem;
+}
+
+.bienvenida p{
+  padding-top: 2rem;
+  width: 30rem;
+  text-align: justify;
+}
+
+.Btn-salida{
+ padding: 2rem;
+}
+
+.Btn-salida button{
+  height: 8rem;
+  width: 12rem;
+  background-color: #016b3d;
+  border-radius: 2rem;
+  color:#fff;
+}
